@@ -7,8 +7,17 @@
 ## 模块一、基础设施
 
 ### 1.1 链上数据
+* [🛠 1.1 5分钟搭建 ETH 归档节点](p1-ji-chu-she-shi/lian-shang-shu-ju/eth-gui-dang-jie-dian.md)
 
-* [🛠 1.1 链上数据-5分钟搭建 ETH 归档节点](p1-ji-chu-she-shi/lian-shang-shu-ju/eth-gui-dang-jie-dian.md)
+* [🛠 ETH 归档节点-0：如何将 AWS 数据下载到本地](p1-ji-chu-she-shi/lian-shang-shu-ju/01.md)
+* [🛠 ETH 归档节点-2： 部署 ETH RPC -如何将 AWS 数据下载到本地](p1-ji-chu-she-shi/lian-shang-shu-ju/02.md)
+* [🛠 ETH 归档节点-3：build_archive_node 解读](p1-ji-chu-she-shi/lian-shang-shu-ju/03.md)
+* [🛠 ETH 归档节点-4：网络问题解答](p1-ji-chu-she-shi/lian-shang-shu-ju/04.md)
+* [🛠 ETH 归档节点-5 Erigon/Lighthouse/RPCdame 节点启动](p1-ji-chu-she-shi/lian-shang-shu-ju/05.md)
+* [🛠 ETH 归档节点-6 安全通信 TSL](p1-ji-chu-she-shi/lian-shang-shu-ju/06.md)
+* [🛠 ETH 归档节点-7 安全攻防](p1-ji-chu-she-shi/lian-shang-shu-ju/07.md)
+* [🛠 ETH 归档节点-8 erigon与 Lighthouse  交易api](p1-ji-chu-she-shi/lian-shang-shu-ju/08.md)
+
 * [🧑 1.2 社交舆情数据](p1-ji-chu-she-shi/lian-shang-shu-ju/eth-gui-dang-jie-dian.md)
 * [💰 1.3 交易所数据](p1-ji-chu-she-shi/lian-shang-shu-ju/eth-gui-dang-jie-dian.md)
 
