@@ -1,0 +1,20 @@
+{
+  "name": "on-chain-data-scientist",
+  "version": "1.0.0",
+  "description": "{% hint style=\"info\" %} **GitBook tip:** your product docs aren't just a reference of all your features! use them to encourage folks to perform certain actions and discover the value in your product. {% endhint %}",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xHuffman/on-chain-data-scientist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xHuffman/on-chain-data-scientist/issues"
+  },
+  "homepage": "https://github.com/xHuffman/on-chain-data-scientist#readme"
+}
