@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>🛠 1.1 5分钟搭建 ETH 归档节点 · GitBook</title>
+        <title>🛠 ETH 归档节点-3：build_archive_node 解读 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="00.html" />
+    <link rel="next" href="04.html" />
     
     
-    <link rel="prev" href="../../overview/our-features.html" />
+    <link rel="prev" href="02.html" />
     
 
     </head>
@@ -144,7 +144,7 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="eth-gui-dang-jie-dian.html">
+        <li class="chapter " data-level="3.1" data-path="eth-gui-dang-jie-dian.html">
             
                 <a href="eth-gui-dang-jie-dian.html">
             
@@ -196,7 +196,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="03.html">
+        <li class="chapter active" data-level="3.5" data-path="03.html">
             
                 <a href="03.html">
             
@@ -274,7 +274,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.11" data-path="eth-gui-dang-jie-dian.html">
+        <li class="chapter " data-level="3.11" data-path="eth-gui-dang-jie-dian.html">
             
                 <a href="eth-gui-dang-jie-dian.html">
             
@@ -287,7 +287,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.12" data-path="eth-gui-dang-jie-dian.html">
+        <li class="chapter " data-level="3.12" data-path="eth-gui-dang-jie-dian.html">
             
                 <a href="eth-gui-dang-jie-dian.html">
             
@@ -386,7 +386,7 @@
         
         
     
-        <li class="chapter active" data-level="6.1" data-path="eth-gui-dang-jie-dian.html">
+        <li class="chapter " data-level="6.1" data-path="eth-gui-dang-jie-dian.html">
             
                 <a href="eth-gui-dang-jie-dian.html">
             
@@ -399,7 +399,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2" data-path="eth-gui-dang-jie-dian.html">
+        <li class="chapter " data-level="6.2" data-path="eth-gui-dang-jie-dian.html">
             
                 <a href="eth-gui-dang-jie-dian.html">
             
@@ -442,7 +442,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >🛠 1.1 5分钟搭建 ETH 归档节点</a>
+        <a href="../.." >🛠 ETH 归档节点-3：build_archive_node 解读</a>
     </h1>
 </div>
 
@@ -457,20 +457,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="5-&#x5206;&#x949F;&#x642D;&#x5EFA;-eth-&#x5F52;&#x6863;&#x8282;&#x70B9;">5 &#x5206;&#x949F;&#x642D;&#x5EFA; ETH &#x5F52;&#x6863;&#x8282;&#x70B9;</h1>
-<h2 id="&#x4E00;&#x3001;&#x9009;&#x62E9;&#x786C;&#x4EF6;&#x914D;&#x7F6E;">&#x4E00;&#x3001;&#x9009;&#x62E9;&#x786C;&#x4EF6;&#x914D;&#x7F6E;</h2>
-<h3 id="11-&#x5B58;&#x50A8;">1.1 &#x5B58;&#x50A8;</h3>
-<h3 id="12-&#x5185;&#x5B58;">1.2 &#x5185;&#x5B58;</h3>
-<h3 id="13-cpu">1.3 CPU</h3>
-<h2 id="&#x4E8C;&#x3001;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;">&#x4E8C;&#x3001;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;</h2>
-<h2 id="&#x4E09;&#x3001;&#x7CFB;&#x7EDF;&#x51C6;&#x5907;">&#x4E09;&#x3001;&#x7CFB;&#x7EDF;&#x51C6;&#x5907;</h2>
-<h3 id="31-&#x5B89;&#x88C5;&#x5411;&#x65E5;&#x8475;">3.1 &#x5B89;&#x88C5;&#x5411;&#x65E5;&#x8475;</h3>
-<h3 id="32--&#x66F4;&#x6539;&#x5BC6;&#x7801;">3.2  &#x66F4;&#x6539;&#x5BC6;&#x7801;</h3>
-<h3 id="33-&#x8BBE;&#x7F6E;&#x62E8;&#x53F7;&#x4E0A;&#x7F51;">3.3 &#x8BBE;&#x7F6E;&#x62E8;&#x53F7;&#x4E0A;&#x7F51;</h3>
-<h2 id="&#x56DB;&#x3001;&#x4E0B;&#x8F7D;eth-&#x5F52;&#x6863;&#x5FEB;&#x7167;">&#x56DB;&#x3001;&#x4E0B;&#x8F7D;ETH &#x5F52;&#x6863;&#x5FEB;&#x7167;</h2>
-<h2 id="&#x4E94;&#x3001;&#x8FD0;&#x884C;&#x5F52;&#x6863;&#x8282;&#x70B9;">&#x4E94;&#x3001;&#x8FD0;&#x884C;&#x5F52;&#x6863;&#x8282;&#x70B9;</h2>
-<h2 id="&#x516D;&#x3001;q-a">&#x516D;&#x3001;Q &amp;A</h2>
-<h2 id="&#x4E03;&#x3001;&#x53C2;&#x8003;">&#x4E03;&#x3001;&#x53C2;&#x8003;</h2>
+                                <p>ETH &#x5F52;&#x6863;&#x8282;&#x70B9;-3&#xFF1A;build_archive_node &#x89E3;&#x8BFB;</p>
+<h1 id="mutexfunction-setupanddownloadlighthousesnapshot-">mutex_function setup_and_download_lighthouse_snapshot &amp;</h1>
+<h1 id="mutexfunction-downloadsnapshots---download-just-the-snapshots-folder">mutex_function download_snapshots &amp; # Download just the snapshots folder.</h1>
+<h1 id="mutexfunction-downloadnodes---downloads-the-last-known-list-of-nodes">mutex_function download_nodes &amp; # Downloads the last known list of nodes.</h1>
+<h1 id="mutexfunction-downloaddatabasefile---download-the-database-file-this-is-the-bulk-of-the-downloads">mutex_function download_database_file &amp; # Download the database file. This is the bulk of the downloads.</h1>
+<p>&#x4E00;&#x3001;&#x4E0B;&#x8F7D;&#x7684;&#x6B65;&#x9AA4;</p>
+<p>1.0 prepare_zfs_datasets</p>
+<p>function prepare_zfs_datasets() {
+  set -euxo pipefail</p>
+<h1 id="create-datasets-if-needed">Create datasets if needed.</h1>
+<p>  zfs create -o mountpoint=/erigon/data tank/erigon_data || true
+  zfs create -o mountpoint=/erigon/data/eth tank/erigon_data/eth || true
+}</p>
+<p>1.1  setup_and_download_lighthouse_snapshot</p>
+<h1 id="lighthouse-is-the-default-consensus-layer-you-can-replace-this-with-another-if-youd-desire">Lighthouse is the default consensus layer, you can replace this with another if you&apos;d desire.</h1>
+<p>function setup_and_download_lighthouse_snapshot() {
+  set -euxo pipefail</p>
+<h1 id="this-will-configure-lighthouse-to-start-and-attach-to-erigon">This will configure lighthouse to start and attach to erigon.</h1>
+<p>  export LIGHTHOUSE_WITH_ERIGON=1
+  . &lt;(curl <a href="https://raw.githubusercontent.com/allada/lighthouse-beacon-snapshot/master/build_lighthouse_beacon_node.sh" target="_blank">https://raw.githubusercontent.com/allada/lighthouse-beacon-snapshot/master/build_lighthouse_beacon_node.sh</a>)
+}</p>
+<p>1.2  download_snapshots</p>
+<p>&#x4E0B;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF1A;s3://public-blockchain-snapshots/eth/erigon-snapshots-folder-latest/</p>
+<p>$ mkdir -p /erigon/data/eth/snapshots/
+$ cp -r /home/eth_bak/eth/erigon-snapshots-folder-latest /erigon/data/eth/snapshots</p>
+<p>function download_snapshots() {
+  set -euxo pipefail
+  if ! zfs list tank/erigon_data/eth/snapshots ; then</p>
+<pre><code># Setup zfs dataset and download the latest erigon snapshots into it if needed.
+zfs create -o mountpoint=/erigon/data/eth/snapshots tank/erigon_data/eth/snapshots
+</code></pre><p>  fi
+  mkdir -p /erigon/data/eth/snapshots/
+  aws s3 sync \
+      --quiet \
+      --request-payer requester \
+      s3://public-blockchain-snapshots/eth/erigon-snapshots-folder-latest/ \
+      /erigon/data/eth/snapshots/
+}</p>
+<p>1.3 download_nodes</p>
+<h1 id="this-is-not-strictly-required-but-it-will-make-it-much-faster-for-a-node-to-join-the-pool">This is not strictly required, but it will make it much faster for a node to join the pool.</h1>
+<p>function download_nodes() {
+  set -euxo pipefail
+  if ! zfs list tank/erigon_data/eth/nodes ; then
+    zfs create -o mountpoint=/erigon/data/eth/nodes tank/erigon_data/eth/nodes
+  fi</p>
+<h1 id="todoallada-figure-out-a-way-to-compress-and-decompress-this-it-has-directories-inside-it">TODO(allada) Figure out a way to compress and decompress this. It has directories inside it</h1>
+<h1 id="that-refer-to-which-protocol-version-it-is-using-so-its-not-easy-to-know-if-an-upgrade">that refer to which protocol version it is using, so it&apos;s not easy to know if an upgrade</h1>
+<h1 id="happens-the-file-is-only-about-1gb-so-not-a-huge-deal">happens. The file is only about 1GB, so not a huge deal.</h1>
+<p>  aws s3 sync \
+      --quiet \
+      --request-payer requester \
+      s3://public-blockchain-snapshots/eth/erigon-nodes-folder-latest/ \
+      /erigon/data/eth/nodes/ \
+  || true # This command is allowed to fail since it&apos;s only an optimization.
+}</p>
+<p>beacon                          erigon-16k-db-latest.mdbx.zstd.fc200a42  erigon-full-node-chaindata.zstd.zstd.41D3fEf3  erigon-snapshots-folder-latest  lost+found
+erigon-16k-db-latest.mdbx.zstd  erigon-full-node-chaindata.zstd.zstd     erigon-nodes-folder-latest                     eth-archive-snapshot            my.log</p>
 
                                 
                                 </section>
@@ -498,12 +541,12 @@
 
             
                 
-                <a href="../../overview/our-features.html" class="navigation navigation-prev " aria-label="Previous page: ✨ 我们的特性">
+                <a href="02.html" class="navigation navigation-prev " aria-label="Previous page: 🛠 ETH 归档节点-2：部署 ETH RPC -如何将 AWS 数据下载到本地">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="00.html" class="navigation navigation-next " aria-label="Next page: 🛠 ETH 归档节点-0：如何将 AWS 数据下载到本地">
+                <a href="04.html" class="navigation navigation-next " aria-label="Next page: 🛠 ETH 归档节点-4：网络问题解答">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -514,7 +557,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"🛠 1.1 5分钟搭建 ETH 归档节点","level":"3.1","depth":1,"next":{"title":"🛠 ETH 归档节点-0：如何将 AWS 数据下载到本地","level":"3.2","depth":1,"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/00.md","ref":"p1-ji-chu-she-shi/lian-shang-shu-ju/00.md","articles":[]},"previous":{"title":"✨ 我们的特性","level":"1.3","depth":1,"path":"overview/our-features.md","ref":"overview/our-features.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/eth-gui-dang-jie-dian.md","mtime":"2022-11-23T09:17:02.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-24T01:56:55.371Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"🛠 ETH 归档节点-3：build_archive_node 解读","level":"3.5","depth":1,"next":{"title":"🛠 ETH 归档节点-4：网络问题解答","level":"3.6","depth":1,"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/04.md","ref":"p1-ji-chu-she-shi/lian-shang-shu-ju/04.md","articles":[]},"previous":{"title":"🛠 ETH 归档节点-2：部署 ETH RPC -如何将 AWS 数据下载到本地","level":"3.4","depth":1,"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/02.md","ref":"p1-ji-chu-she-shi/lian-shang-shu-ju/02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/03.md","mtime":"2022-11-23T11:00:30.689Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-24T01:56:55.371Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

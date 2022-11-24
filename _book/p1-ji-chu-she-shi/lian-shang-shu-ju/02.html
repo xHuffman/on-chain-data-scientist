@@ -1,0 +1,845 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>🛠 ETH 归档节点-2：部署 ETH RPC -如何将 AWS 数据下载到本地 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03.html" />
+    
+    
+    <link rel="prev" href="00.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">预习</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    👋 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../overview/what-we-do.html">
+            
+                <a href="../../overview/what-we-do.html">
+            
+                    
+                    💡 关于我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../overview/our-features.html">
+            
+                <a href="../../overview/our-features.html">
+            
+                    
+                    ✨ 我们的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模块一、基础设施</li>
+        
+        
+    
+
+    
+        
+        <li class="header">1.1 链上数据</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="eth-gui-dang-jie-dian.html">
+            
+                <a href="eth-gui-dang-jie-dian.html">
+            
+                    
+                    🛠 1.1 5分钟搭建 ETH 归档节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    🛠 ETH 归档节点-0：如何将 AWS 数据下载到本地
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    🛠 ETH 归档节点-1：部署 ETH RPC -改写 AWS执行脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    🛠 ETH 归档节点-2：部署 ETH RPC -如何将 AWS 数据下载到本地
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    🛠 ETH 归档节点-3：build_archive_node 解读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    🛠 ETH 归档节点-4：网络问题解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    🛠 ETH 归档节点-5 Erigon/Lighthouse/RPCdame 节点启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    🛠 ETH 归档节点-6 安全通信 TSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    🛠 ETH 归档节点-7 安全攻防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    🛠 ETH 归档节点-8 erigon与 Lighthouse  交易api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="eth-gui-dang-jie-dian.html">
+            
+                <a href="eth-gui-dang-jie-dian.html">
+            
+                    
+                    🧑 1.2 社交舆情数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="eth-gui-dang-jie-dian.html">
+            
+                <a href="eth-gui-dang-jie-dian.html">
+            
+                    
+                    💰 1.3 交易所数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模块二、数据处理&算法</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../p2-shu-ju-chu-li-suan-fa/making-a-post.html">
+            
+                <a href="../../p2-shu-ju-chu-li-suan-fa/making-a-post.html">
+            
+                    
+                    💽 2.1 分布式数据库Doris
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../p2-shu-ju-chu-li-suan-fa/making-a-post.html">
+            
+                <a href="../../p2-shu-ju-chu-li-suan-fa/making-a-post.html">
+            
+                    
+                    🌟 2.2 Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../p2-shu-ju-chu-li-suan-fa/making-a-post.html">
+            
+                <a href="../../p2-shu-ju-chu-li-suan-fa/making-a-post.html">
+            
+                    
+                    🛸 2.3 Flink
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模块三、数据可视化</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../p3-shu-ju-ke-shi-hua/for-beginners.md">
+            
+                <span>
+            
+                    
+                    🎨  3.1 入门教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../p3-shu-ju-ke-shi-hua/for-developers.html">
+            
+                <a href="../../p3-shu-ju-ke-shi-hua/for-developers.html">
+            
+                    
+                    🖥  3.2 中级教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模块四、实战篇</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="eth-gui-dang-jie-dian.html">
+            
+                <a href="eth-gui-dang-jie-dian.html">
+            
+                    
+                    📪 4.1 XEN 项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="eth-gui-dang-jie-dian.html">
+            
+                <a href="eth-gui-dang-jie-dian.html">
+            
+                    
+                    📪 4.2 4年1000倍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >🛠 ETH 归档节点-2：部署 ETH RPC -如何将 AWS 数据下载到本地</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>ETH &#x5F52;&#x6863;&#x8282;&#x70B9;-2&#xFF1A; &#x90E8;&#x7F72; ETH RPC -&#x5982;&#x4F55;&#x5C06; AWS &#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;</p>
+<p>&#x4E09;&#x3001;&#x5C06;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;</p>
+<p>s3pcp --requester-pays s3://public-blockchain-snapshots/eth/erigon-16k-db-latest.mdbx.zstd \
+    | pv \
+    | pzstd -p $(nproc) -q -d -f -o /erigon/data/eth/chaindata/mdbx.dat</p>
+<p>pzstd: -: Failed to open output file.
+0.00 B 0:00:25 [0.00 B/s] [&lt;=&gt;                                                                                                            ]
+thread &apos;main&apos; panicked at &apos;EPIPE: Broken pipe&apos;, src/main.rs:140:31</p>
+<p>note: run with <code>RUST_BACKTRACE=1</code> environment variable to display a backtrace</p>
+<p>xargs: printf: terminated by signal 13</p>
+<p>/usr/bin/s3pcp: line 191: 23240 Done                    seq 1 $parts_count
+     23241 Exit 125                | xargs printf &quot;$shell_command\n&quot;</p>
+<pre><code> 23242 Aborted                 (core dumped) | pjoin -b &quot;$per_job_buffer&quot; &quot;$maybe_parallel_count&quot;
+</code></pre><p>&#x7B2C;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;pzstd: -: Failed to open output file.</p>
+<p>whoami</p>
+<p>sudo chown -R &quot;$USER:&quot;/erigon/data/eth/chaindata</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;thread &apos;main&apos; panicked at &apos;EPIPE: Broken pipe&apos;, src/main.rs:140:31</p>
+<p>Broken pipe </p>
+<p>&#x4E8C;&#x3001;&#x6539;&#x5199;&#x4EE3;&#x7801;</p>
+<p>$ ls /home/eth_bak/eth/
+beacon<br>erigon-16k-db-latest.mdbx.zstd.fc200a42<br>erigon-full-node-chaindata.zstd.zstd.41D3fEf3<br>erigon-snapshots-folder-latest  lost+found
+erigon-16k-db-latest.mdbx.zstd  erigon-full-node-chaindata.zstd.zstd     erigon-nodes-folder-latest                     eth-archive-snapshot            my.log</p>
+<p>$ sudo bash ./build_archive_node.sh</p>
+<p>2.1 &#x5C06;&#x9700;&#x8981; aws &#x4E0B;&#x8F7D;&#x7684;&#x5168;&#x90E8;&#x53D8;&#x6210; cp</p>
+<p> = note: /usr/bin/ld: cannot find Scrt1.o: No such file or directory
+          /usr/bin/ld: cannot find crti.o: No such file or directory
+          collect2: error: ld returned 1 exit status</p>
+<p>sudo apt install </p>
+<p>sudo apt-get install Scrt1
+sudo apt-get install crti</p>
+<p>$  sudo apt-get install libc6-dev
+$ sudo apt-get install libc6=2.23-0ubuntu11.3</p>
+<p>&#x5728;&#x6267;&#x884C;sudo apt-get install libc6=2.23-0ubuntu11.3&#x65F6;&#x5019;&#xFF0C;&#x9875;&#x9762;&#x63D0;&#x793A;&#x4F1A;&#x5220;&#x9664;&#x4E00;&#x4E9B;&#x76F8;&#x5E94;&#x4F9D;&#x8D56;&#x7684;&#x5305;&#xFF0C;&#x6211;&#x70B9;&#x4E86;&#x786E;&#x8BA4;&#xFF0C;&#x6700;&#x7EC8;&#x5BFC;&#x81F4;&#x3002;</p>
+<p>&#x5F00;&#x673A;&#x4F1A;&#x8FDB;&#x5165; GNU GRUB &#x9875;&#x9762;&#x5E76;&#x4E14;&#x770B;&#x4E0D;&#x5230; ubuntu &#x7CFB;&#x7EDF;
+Ubuntu bootloader turned into Debian</p>
+<p>&#x4E09;&#x3001;&#x5C06; EXT4 &#x4E2D;&#x7684;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5230; zfs&#x4E0A;</p>
+<p>$ sudo mount /dev/nvme1n1 /home/eth
+$ sudo fdisk -l
+$ blkid
+$ sudo mount -t ext4 /dev/nvme1n1p2 /home/eth</p>
+<p>mount: /home/eth: wrong fs type, bad option, bad superblock on /dev/nvme1n1p2, missing codepage or helper program, or other error.</p>
+<p>mount: /home/eth: wrong fs type, bad option, bad superblock on /dev/nvme1n1, missing codepage or helper program, or other error.</p>
+<p>[10397.489887] EXT4-fs (nvme1n1p2): Unrecognized mount option &quot;nouuid&quot; or missing value
+[11217.696553] EXT4-fs (nvme1n1p2): Unrecognized mount option &quot;nouuid&quot; or missing value</p>
+<p>$ tail /var/log/syslog</p>
+<p>$ blkid
+/dev/nvme0n1p3: LABEL=&quot;bpool&quot; UUID=&quot;15400053703084002440&quot; UUID_SUB=&quot;17969276116506075598&quot; BLOCK_SIZE=&quot;4096&quot; TYPE=&quot;zfs_member&quot; PARTUUID=&quot;30fa9b11-5eb2-c540-a349-eec7b9e1d343&quot;
+/dev/nvme0n1p1: UUID=&quot;6840-33FE&quot; BLOCK_SIZE=&quot;512&quot; TYPE=&quot;vfat&quot; PARTLABEL=&quot;EFI System Partition&quot; PARTUUID=&quot;04604269-f840-4a12-8d89-1b4fd9f7f016&quot;
+/dev/nvme0n1p4: LABEL=&quot;rpool&quot; UUID=&quot;958117756132773064&quot; UUID_SUB=&quot;7633760473405367670&quot; BLOCK_SIZE=&quot;4096&quot; TYPE=&quot;zfs_member&quot; PARTUUID=&quot;0877044c-43af-e441-a9ce-21f057f1f6bc&quot;
+/dev/nvme0n1p2: UUID=&quot;8895c62a-9389-4833-afb4-2c73db34406a&quot; TYPE=&quot;swap&quot; PARTUUID=&quot;2ad1f604-cbd0-9b4e-ad7a-671224b57f03&quot;
+/dev/nvme1n1p2: UUID=&quot;fdbe5416-dd29-480e-b1a1-054b20221090&quot; BLOCK_SIZE=&quot;4096&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;d9fd32d7-6c90-47e8-89a5-edb0f9253a8d&quot;
+/dev/nvme1n1p1: UUID=&quot;23BD-0B08&quot; BLOCK_SIZE=&quot;512&quot; TYPE=&quot;vfat&quot; PARTLABEL=&quot;EFI System Partition&quot; PARTUUID=&quot;880ebd93-5558-43ed-b2af-f8e4d66be837&quot;</p>
+<p>&#x6392;&#x67E5;&#x95EE;&#x9898;&#x7684;&#x539F;&#x56E0;$ sudo fdisk -l</p>
+<p>Disk /dev/loop0: 4 KiB, 4096 bytes, 8 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop1: 61.89 MiB, 64901120 bytes, 126760 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop2: 155.63 MiB, 163188736 bytes, 318728 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop3: 248.76 MiB, 260841472 bytes, 509456 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop4: 81.26 MiB, 85209088 bytes, 166424 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop5: 45.86 MiB, 48087040 bytes, 93920 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop6: 43.63 MiB, 45748224 bytes, 89352 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop7: 284 KiB, 290816 bytes, 568 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/nvme0n1: 1.82 TiB, 2000398934016 bytes, 3907029168 sectors
+Disk model: WD Green SN350 2TB
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 56965481-60E8-4DE2-9901-24966D93B67E
+Device           Start        End    Sectors  Size Type
+/dev/nvme0n1p1    2048    1050623    1048576  512M EFI System
+/dev/nvme0n1p2 1050624    5244927    4194304    2G Linux swap
+/dev/nvme0n1p3 5244928    9439231    4194304    2G Solaris boot
+/dev/nvme0n1p4 9439232 3907029134 3897589903  1.8T Solaris root</p>
+<p>Disk /dev/nvme1n1: 1.82 TiB, 2000398934016 bytes, 3907029168 sectors
+Disk model: WD Green SN350 2TB
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 0BD9CDC4-4C54-4BCC-9BA8-34BB3C65B762
+Device           Start        End    Sectors  Size Type
+/dev/nvme1n1p1    2048    1050623    1048576  512M EFI System
+/dev/nvme1n1p2 1050624 3907028991 3905978368  1.8T Linux filesystem</p>
+<p>Disk /dev/loop8: 47.99 MiB, 50319360 bytes, 98280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop9: 63.2 MiB, 66265088 bytes, 129424 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop10: 284 KiB, 290816 bytes, 568 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop11: 91.69 MiB, 96141312 bytes, 187776 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop12: 238.44 MiB, 250023936 bytes, 488328 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop13: 346.33 MiB, 363151360 bytes, 709280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>&#x4E00;&#x3001;&#x64E6;&#x9664;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</p>
+<p>$ sudo parted -ls
+$ sudo umount /home/eth
+$ lsblk --fs --json
+$ fdisk /dev/nvme1n1</p>
+<p>1.2 &#x64E6;&#x9664;&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5378;&#x8F7D;&#x78C1;&#x76D8;
+$ sudo umount /home/eth</p>
+<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;
+$ sudo fdisk /dev/nvme1n1
+$ d
+$ wq</p>
+<p>&#xFFFC;</p>
+<p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x786E;&#x5B9A;&#x662F;&#x5426;&#x6267;&#x884C;&#x6210;&#x529F;</p>
+<ol>
+<li>&#x4F7F;&#x7528;lsblk --fs --json&#xFF0C;nvme1n1 &#x7684; fstyep &#x53D8;&#x6210;&#x7684; null</li>
+<li>&#x4F7F;&#x7528;sudo parted -ls&#xFF0C;File system&#x6CA1;&#x6709;&#x6570;&#x636E;</li>
+</ol>
+<p>$ lsblk --fs --json
+&#x2026;..
+ {&quot;name&quot;:&quot;nvme1n1&quot;, &quot;fstype&quot;:null, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:null, &quot;fsuse%&quot;:null, &quot;mountpoint&quot;:null}
+&#x2026;.
+$ sudo parted -ls
+Model: WD Green SN350 2TB (nvme)
+Disk /dev/nvme0n1: 2000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:</p>
+<p>Number  Start   End     Size    File system  Name                  Flags
+ 1      1049kB  538MB   537MB   fat32        EFI System Partition  boot, esp
+ 2      538MB   2000GB  2000GB  ext4</p>
+<p>Model: WD Green SN350 2TB (nvme)
+Disk /dev/nvme1n1: 2000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:</p>
+<p>Number  Start  End  Size  Type  File system  Flags</p>
+<p>$ sudo parted -ls
+[sudo] password for huffman:
+Model: WD Green SN350 2TB (nvme)
+Disk /dev/nvme0n1: 2000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:</p>
+<p>Number  Start   End     Size    File system  Name                  Flags
+ 1      1049kB  538MB   537MB   fat32        EFI System Partition  boot, esp
+ 2      538MB   2000GB  2000GB  ext4</p>
+<p>Model: WD Green SN350 2TB (nvme)
+Disk /dev/nvme1n1: 2000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: loop
+Disk Flags:</p>
+<p>Number  Start  End     Size    File system  Flags
+ 1      0.00B  2000GB  2000GB  ext4</p>
+<p>&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x7ED3;&#x6784;
+huffman@huffman-pro:/home/eth$ lsblk --fs --json
+{
+   &quot;blockdevices&quot;: [
+      {&quot;name&quot;:&quot;loop0&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/bare/5&quot;},
+      {&quot;name&quot;:&quot;loop1&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/1password/123&quot;},
+      {&quot;name&quot;:&quot;loop2&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/snap-store/599&quot;},
+      {&quot;name&quot;:&quot;loop3&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/sublime-text/112&quot;},
+      {&quot;name&quot;:&quot;loop4&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/snapd/17336&quot;},
+      {&quot;name&quot;:&quot;loop5&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/1password/116&quot;},
+      {&quot;name&quot;:&quot;loop6&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/snap-store/558&quot;},
+      {&quot;name&quot;:&quot;loop7&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/gnome-3-38-2004/119&quot;},
+      {&quot;name&quot;:&quot;loop8&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/snapd/17029&quot;},
+      {&quot;name&quot;:&quot;loop9&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/core20/1623&quot;},
+      {&quot;name&quot;:&quot;loop10&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/gnome-3-28-1804/161&quot;},
+      {&quot;name&quot;:&quot;loop11&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/gtk-common-themes/1535&quot;},
+      {&quot;name&quot;:&quot;loop12&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/gnome-3-38-2004/115&quot;},
+      {&quot;name&quot;:&quot;loop13&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/core18/2566&quot;},
+      {&quot;name&quot;:&quot;loop14&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/go/9981&quot;},
+      {&quot;name&quot;:&quot;loop15&quot;, &quot;fstype&quot;:&quot;squashfs&quot;, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:&quot;0&quot;, &quot;fsuse%&quot;:&quot;100%&quot;, &quot;mountpoint&quot;:&quot;/snap/core20/1634&quot;},
+      {&quot;name&quot;:&quot;nvme0n1&quot;, &quot;fstype&quot;:null, &quot;label&quot;:null, &quot;uuid&quot;:null, &quot;fsavail&quot;:null, &quot;fsuse%&quot;:null, &quot;mountpoint&quot;:null,
+         &quot;children&quot;: [
+            {&quot;name&quot;:&quot;nvme0n1p1&quot;, &quot;fstype&quot;:&quot;vfat&quot;, &quot;label&quot;:null, &quot;uuid&quot;:&quot;23BD-0B08&quot;, &quot;fsavail&quot;:&quot;505.8M&quot;, &quot;fsuse%&quot;:&quot;1%&quot;, &quot;mountpoint&quot;:&quot;/boot/efi&quot;},
+            {&quot;name&quot;:&quot;nvme0n1p2&quot;, &quot;fstype&quot;:&quot;ext4&quot;, &quot;label&quot;:null, &quot;uuid&quot;:&quot;fdbe5416-dd29-480e-b1a1-054b20221090&quot;, &quot;fsavail&quot;:&quot;756.5G&quot;, &quot;fsuse%&quot;:&quot;54%&quot;, &quot;mountpoint&quot;:&quot;/&quot;}
+         ]
+      },
+      {&quot;name&quot;:&quot;nvme1n1&quot;, &quot;fstype&quot;:&quot;ext4&quot;, &quot;label&quot;:null, &quot;uuid&quot;:&quot;b8ea1c9a-b822-422a-a7ee-41602403ba9f&quot;, &quot;fsavail&quot;:null, &quot;fsuse%&quot;:null, &quot;mountpoint&quot;:null}
+   ]
+}</p>
+<p>wipefs</p>
+<p><a href="https://superuser.com/questions/1281355/how-to-delete-the-partition-after-mkfs" target="_blank">https://superuser.com/questions/1281355/how-to-delete-the-partition-after-mkfs</a></p>
+<p>&#x5378;&#x8F7D;&#x78C1;&#x76D8;
+<a href="https://askubuntu.com/questions/859787/how-to-unmount-and-mount-pen-drive-in-ubuntu-via-command-line" target="_blank">https://askubuntu.com/questions/859787/how-to-unmount-and-mount-pen-drive-in-ubuntu-via-command-line</a>
+&#x5220;&#x9664;&#x5206;&#x533A;
+<a href="https://www.cnblogs.com/0x4D75/p/8961150.html" target="_blank">https://www.cnblogs.com/0x4D75/p/8961150.html</a></p>
+<p>1.1 &#x73B0;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</p>
+<p>huffman@huffman-pro:~$ sudo fdisk -lu
+[sudo] password for huffman:
+Disk /dev/loop0: 4 KiB, 4096 bytes, 8 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop1: 144.18 MiB, 151175168 bytes, 295264 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop2: 45.95 MiB, 48156672 bytes, 94056 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop3: 64.87 MiB, 68001792 bytes, 132816 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop4: 47.101 MiB, 50319360 bytes, 98280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop5: 138.99 MiB, 145719296 bytes, 284608 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop6: 54.24 MiB, 56872960 bytes, 111080 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop7: 346.34 MiB, 363151360 bytes, 709280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/nvme0n1: 1.84 TiB, 2000398934016 bytes, 3907029168 sectors
+Disk model: WD Green SN350 2TB
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 0BD9CDC4-4C54-4BCC-9BA8-34BB3C65B762</p>
+<p>Device           Start        End    Sectors  Size Type
+/dev/nvme0n1p1    2048    1050623    1048576  512M EFI System
+/dev/nvme0n1p2 1050624 3907028991 3905978368  1.8T Linux filesystem</p>
+<p>Disk /dev/nvme1n1: 1.84 TiB, 2000398934016 bytes, 3907029168 sectors
+Disk model: WD Green SN350 2TB
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop8: 47.101 MiB, 50315264 bytes, 98272 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop10: 164.78 MiB, 172761088 bytes, 337424 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop9: 63.23 MiB, 66293760 bytes, 129480 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop13: 55.58 MiB, 58261504 bytes, 113792 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop11: 91.7 MiB, 96141312 bytes, 187776 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop12: 346.3 MiB, 363118592 bytes, 709216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop14: 99.59 MiB, 104415232 bytes, 203936 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+<p>Disk /dev/loop15: 63.2 MiB, 66265088 bytes, 129424 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="00.html" class="navigation navigation-prev " aria-label="Previous page: 🛠 ETH 归档节点-1：部署 ETH RPC -改写 AWS执行脚本">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03.html" class="navigation navigation-next " aria-label="Next page: 🛠 ETH 归档节点-3：build_archive_node 解读">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"🛠 ETH 归档节点-2：部署 ETH RPC -如何将 AWS 数据下载到本地","level":"3.4","depth":1,"next":{"title":"🛠 ETH 归档节点-3：build_archive_node 解读","level":"3.5","depth":1,"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/03.md","ref":"p1-ji-chu-she-shi/lian-shang-shu-ju/03.md","articles":[]},"previous":{"title":"🛠 ETH 归档节点-1：部署 ETH RPC -改写 AWS执行脚本","level":"3.3","depth":1,"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/00.md","ref":"p1-ji-chu-she-shi/lian-shang-shu-ju/00.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"p1-ji-chu-she-shi/lian-shang-shu-ju/02.md","mtime":"2022-11-23T10:23:22.637Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-24T01:56:55.371Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
